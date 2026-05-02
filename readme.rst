@@ -1,71 +1,69 @@
-###################
-What is CodeIgniter
-###################
+# Renstra - Sistem Informasi Rencana Strategis & Monitoring IKU
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+Sistem Informasi **Renstra** (Rencana Strategis) adalah platform berbasis web yang dirancang untuk mengelola, memantau, dan melaporkan Indikator Kinerja Utama (IKU) serta beban kerja dosen (EWMP). Aplikasi ini dikembangkan khusus untuk kebutuhan manajemen data akademik di lingkungan fakultas/universitas.
 
-*******************
-Release Information
-*******************
+---
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+## Fitur Utama & Modul Sistem
 
-**************************
-Changelog and New Features
-**************************
+### 1. Sistem Monitoring IKU (Indikator Kinerja Utama)
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+Sistem ini dirancang untuk memantau performa institusi berdasarkan target tahunan yang terukur.
 
-*******************
-Server Requirements
-*******************
+- **Struktur Hierarki**:
+  - **Level 1**: Sasaran Strategis Utama.
+  - **Level 2**: Indikator Kinerja Utama (IKU).
+  - **Level 3**: Rincian Target per Bidang.
+  - **Level 4**: Detail Operasional/Indikator Teknis.
+- **Pengelolaan Data**: Fitur Tambah/Edit/Hapus untuk setiap level indikator, serta penentuan Bobot dan Target di setiap periode tahun akademik.
+- **Tracking Real-time**: Update capaian (Realisasi) yang langsung terintegrasi dengan persentase kemajuan di dashboard.
 
-PHP version 5.6 or newer is recommended.
+### 2. Modul EWMP (Ekuivalen Waktu Mengajar Penuh)
 
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
+Modul inti bagi Dosen untuk melaporkan beban kerja tridharma secara akurat:
 
-************
-Installation
-************
+- **Penelitian & Pengabdian**:
+  - Pengelolaan judul penelitian, kategori (Dana Internal/DIKTI/Lainnya).
+  - Manajemen Anggota: Pencatatan peran (Ketua/Anggota) serta kolaborasi dengan Mahasiswa (NIM terintegrasi).
+  - Monitoring Dana: Pencatatan besar hibah dan pemberi hibah.
+- **Publikasi Karya Ilmiah**:
+  - **Jurnal**: Klasifikasi Jurnal Nasional (Sinta 1-6), Internasional Bereputasi (Q1-Q4), dan Internasional Non-Scopus.
+  - **Prosiding**: Dokumentasi artikel seminar nasional dan internasional.
+  - Integrasi Link: Penyimpanan URL Jurnal, Volume, Nomor, dan DOI untuk verifikasi data.
+- **Hak Kekayaan Intelektual (HAKI)**:
+  - Dokumentasi spesifik untuk: _Hak Cipta, Merk, Lisensi, Buku (ISBN), Paten,_ dan _Desain Industri_.
+  - Upload Sertifikat: Penyimpanan bukti legalitas HAKI dalam sistem.
+- **Aktivitas Penunjang**: Pencatatan peran sebagai _Editor Jurnal, Reviewer,_ hingga _Invited Speaker_ pada acara ilmiah.
 
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
+### 3. Manajemen Pengguna & Keamanan
 
-*******
-License
-*******
+- **Multi-Level Access Control (RBAC)**:
+  - **Admin**: Akses penuh ke data master, manajemen user, dan konfigurasi sistem.
+  - **Koordinator**: Pengelola data IKU dan verifikasi laporan dosen.
+  - **Dosen**: User personal untuk menginput data EWMP dan memantau progres publikasi mandiri.
+- **Autentikasi Aman**: Sistem login terpusat dengan enkripsi password.
 
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
+### 4. Pelaporan & Output Dokumentasi
 
-*********
-Resources
-*********
+- **Visual Analytics Dashboard**: Chart interaktif yang menyajikan perbandingan Target vs Capaian IKU serta tren publikasi tahunan.
+- **Export System**:
+  - **Cetak Laporan**: Mengonversi data web ke format PDF yang rapi untuk lampiran akreditasi.
+  - **Rekapitulasi**: Fitur ringkasan hasil pelaporan per tahun akademik.
 
--  `User Guide <https://codeigniter.com/docs>`_
--  `Contributing Guide <https://github.com/bcit-ci/CodeIgniter/blob/develop/contributing.md>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
+---
 
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
+## Tech Stack
 
-***************
-Acknowledgement
-***************
+- **Framework**: CodeIgniter 3.1.x
+- **Bahasa Pemrograman**: PHP >= 5.6
+- **Database**: MySQL / MariaDB
+- **Frontend**: Bootstrap 4+, DataTables, Chart.js (Dashboard Analytics)
+- **Library Tambahan**:
+  - `dompdf` / `mPDF` (Report Generation)
+  - PHP Composer (Dependency Manager)
 
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+---
+
+## Lisensi
+
+Proyek ini dikembangkan untuk kepentingan internal dan menggunakan lisensi MIT.
