@@ -66,4 +66,4 @@ Modul inti bagi Dosen untuk melaporkan beban kerja tridharma secara akurat:
 
 ## Lisensi
 
-Proyek ini dikembangkan untuk kepentingan internal dan menggunakan lisensi MIT.
+Proyek ini dikembangkan untuk kepentingan internal.
